@@ -29,6 +29,7 @@ html {
 .section-movies {
     background: hotpink;
     grid-area: section-anime;
+    padding: 20px 40px;
 }
 
 .footer {
@@ -134,4 +135,40 @@ html {
 .nav-settings li img:hover {
     transform: rotate(0.5turn);
     transition: .3s;
+}
+
+
+/*MOVIE CARD*/
+
+.movie-card {
+    margin-top: 20px;
+    position: relative;
+    width: 420px;
+    cursor: pointer;
+}
+
+.movie-overlay {
+    display: none;
+    padding: 30px 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    background: rgb(0 0 0 / 80%);
+}
+
+.movie-card:hover .movie-overlay {
+    display: block;
+}
+
+.movie-overlay h2 {
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.movie-overlay p {
+    line-height: 1.5em;
+    color: #b6aeae;
 }
