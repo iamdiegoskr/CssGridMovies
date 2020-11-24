@@ -22,7 +22,7 @@ html {
 }
 
 .nav {
-    background: #021d4d;
+    background: #04317e;
     grid-area: nav;
 }
 
@@ -123,4 +123,19 @@ html {
 .nav-menu li p,
 .nav-settings li p {
     color: #d8cece;
+}
+
+.nav-menu li img,
+.nav-settings li img {
+    margin-bottom: 8px;
+}
+
+.nav-menu li img:hover {
+    transform: scale(1.3);
+    transition: .3s;
+}
+
+.nav-settings li img:hover {
+    transform: rotate(0.5turn);
+    transition: .3s;
 }
