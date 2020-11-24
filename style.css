@@ -10,21 +10,14 @@ html {
 
 .container {
     height: 100vh;
-    padding: 10px;
     display: grid;
     grid-template-columns: 100px 1fr 1fr 1fr;
-    grid-template-rows: 80px 1fr 1fr 1fr 80px;
+    grid-template-rows: auto 1fr 1fr 1fr 80px;
     grid-template-areas: "header header header header" "nav section1 section1 section1" "nav section2 section2 section2" "nav section3 section3 section3" "footer footer footer footer";
-    gap: 10px;
-}
-
-.container>* {
-    background: orange;
-    padding: 20px;
 }
 
 .header {
-    background: gold;
+    background: #ffffff;
     grid-area: header;
 }
 
@@ -51,4 +44,54 @@ html {
 .footer {
     background: lightcoral;
     grid-area: footer;
+}
+
+
+/*HEADER*/
+
+.header {
+    display: grid;
+    grid-template-columns: 100px 1fr 300px;
+    column-gap: 20px;
+    padding: 10px;
+}
+
+.header .header-icon {
+    align-self: center;
+    justify-self: center;
+}
+
+.header .header-search {
+    align-self: center;
+}
+
+.header .header-search input {
+    padding: 8px;
+    width: 80%;
+    border: 1px solid rgb(182, 181, 181);
+    border-radius: 6px;
+}
+
+.header .header-search input::placeholder {
+    color: rgb(151, 148, 148);
+}
+
+.header .header-profile img {
+    width: 58px;
+    border-radius: 50%;
+}
+
+.header .header-profile {
+    justify-self: end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .header-profile .profile-name {
+    font-size: 1.2rem;
+    color: #848485;
+    font-weight: 600;
+    letter-spacing: .8px;
+    padding-right: 12px;
 }
