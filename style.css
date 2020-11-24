@@ -13,7 +13,7 @@ html {
     display: grid;
     grid-template-columns: 110px 1fr;
     grid-template-rows: auto 1fr 80px;
-    grid-template-areas: "header header" "nav section-anime" "footer footer";
+    grid-template-areas: "header header" "nav section-movies" "footer footer";
 }
 
 .header {
@@ -22,13 +22,13 @@ html {
 }
 
 .nav {
-    background: #04317e;
+    background: linear-gradient(29deg, rgb(19 18 101) 21%, rgba(35, 9, 9, 1) 88%);
     grid-area: nav;
 }
 
 .section-movies {
-    background: hotpink;
-    grid-area: section-anime;
+    background: #f1f5f8;
+    grid-area: section-movies;
     padding: 20px 40px;
 }
 
@@ -138,18 +138,44 @@ html {
 }
 
 
+/*GRID MOVIE-LIST*/
+
+.movies-list {
+    display: grid;
+    grid-template-columns: repeat(4, 260px);
+    grid-template-rows: 360px;
+    column-gap: 40px;
+    justify-content: center;
+}
+
+
 /*MOVIE CARD*/
 
 .movie-card {
     margin-top: 20px;
     position: relative;
-    width: 420px;
     cursor: pointer;
+    border-radius: 16px;
+    box-shadow: 0px 3px 4px 1px #6a6a6a;
+}
+
+.movie-card .movie-poster {
+    width: 100%;
+    height: 100%;
+}
+
+.movie-card .movie-poster img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .movie-overlay {
     display: none;
     padding: 30px 20px;
+    border-radius: 16px;
     position: absolute;
     top: 0;
     right: 0;
@@ -171,4 +197,16 @@ html {
 .movie-overlay p {
     line-height: 1.5em;
     color: #b6aeae;
+}
+
+.movie-overlay span {
+    line-height: 1.5em;
+    color: #b6aeae;
+    position: absolute;
+    bottom: 30px;
+}
+
+.title-container h2 {
+    color: #00000070;
+    font-size: 1.8rem;
 }
