@@ -1,0 +1,1 @@
+This is a practice project of the platzi css grid course 💚💚💚💚
