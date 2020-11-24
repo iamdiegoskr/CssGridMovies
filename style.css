@@ -11,9 +11,9 @@ html {
 .container {
     height: 100vh;
     display: grid;
-    grid-template-columns: auto 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr 1fr 80px;
-    grid-template-areas: "header header header header" "nav section1 section1 section1" "nav section2 section2 section2" "nav section3 section3 section3" "footer footer footer footer";
+    grid-template-columns: 110px 1fr;
+    grid-template-rows: auto 1fr 80px;
+    grid-template-areas: "header header" "nav section-anime" "footer footer";
 }
 
 .header {
@@ -26,19 +26,9 @@ html {
     grid-area: nav;
 }
 
-.section1 {
+.section-movies {
     background: hotpink;
-    grid-area: section1;
-}
-
-.section2 {
-    background: indigo;
-    grid-area: section2;
-}
-
-.section3 {
-    background: khaki;
-    grid-area: section3;
+    grid-area: section-anime;
 }
 
 .footer {
@@ -52,22 +42,26 @@ html {
 .header {
     display: grid;
     grid-template-columns: 100px 1fr 300px;
+    grid-template-rows: auto;
+    grid-template-areas: "logo search profile";
     column-gap: 20px;
     padding: 10px;
 }
 
 .header .header-icon {
+    grid-area: logo;
     align-self: center;
-    justify-self: start;
+    justify-self: center;
 }
 
 .header .header-search {
+    grid-area: search;
     align-self: center;
 }
 
 .header .header-search input {
     padding: 8px;
-    width: 80%;
+    width: 100%;
     border: 1px solid rgb(182, 181, 181);
     border-radius: 6px;
     box-shadow: 0px 1px 3px 0px #a6a6a6;
@@ -83,7 +77,8 @@ html {
 }
 
 .header .header-profile {
-    justify-self: end;
+    grid-area: profile;
+    justify-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,7 +99,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 22px;
+    padding: 22px 0px;
 }
 
 .nav-menu,
@@ -123,6 +118,7 @@ html {
 .nav-menu li p,
 .nav-settings li p {
     color: #d8cece;
+    font-size: .8rem;
 }
 
 .nav-menu li img,
