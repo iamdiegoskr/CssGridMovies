@@ -12,7 +12,7 @@ html {
     height: 100vh;
     display: grid;
     grid-template-columns: 110px 1fr;
-    grid-template-rows: auto 1fr 80px;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: "header header" "nav section-movies" "footer footer";
 }
 
@@ -33,8 +33,34 @@ html {
 }
 
 .footer {
-    background: lightcoral;
+    background: rgb(30 34 39);
+    padding: 8px;
     grid-area: footer;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas: "social-medias profile-autor";
+}
+
+.footer .social-medias {
+    list-style: none;
+    grid-area: social-medias;
+    display: flex;
+}
+
+.footer .social-medias li {
+    padding: 16px;
+}
+
+.footer .profile-creator {
+    grid-area: profile-autor;
+    color: #cdcdcd;
+    font-size: 1.4rem;
+    align-self: center;
+    justify-self: end;
+}
+
+.footer .profile-creator p {
+    padding: 16px;
 }
 
 
@@ -142,7 +168,8 @@ html {
 
 .movies-list {
     display: grid;
-    grid-template-columns: repeat(4, 260px);
+    /* grid-template-columns: repeat(4, 260px); */
+    grid-template-columns: repeat( auto-fit, minmax(180px, 260px));
     grid-template-rows: 360px;
     column-gap: 40px;
     justify-content: center;
@@ -207,6 +234,7 @@ html {
 }
 
 .title-container h2 {
+    margin-top: 18px;
     color: #00000070;
     font-size: 1.8rem;
 }
