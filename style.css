@@ -11,7 +11,7 @@ html {
 .container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 100px 1fr 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr 1fr;
     grid-template-rows: auto 1fr 1fr 1fr 80px;
     grid-template-areas: "header header header header" "nav section1 section1 section1" "nav section2 section2 section2" "nav section3 section3 section3" "footer footer footer footer";
 }
@@ -22,7 +22,7 @@ html {
 }
 
 .nav {
-    background: greenyellow;
+    background: #021d4d;
     grid-area: nav;
 }
 
@@ -95,4 +95,32 @@ html {
     font-weight: 600;
     letter-spacing: .8px;
     padding-right: 12px;
+}
+
+
+/*NAV*/
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22px;
+}
+
+.nav-menu,
+.nav-settings {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav-menu li {
+    margin-bottom: 14px;
+}
+
+.nav-menu li p,
+.nav-settings li p {
+    color: #d8cece;
 }
