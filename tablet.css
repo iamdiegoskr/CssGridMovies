@@ -1,0 +1,23 @@
+.header {
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "logo  profile" "search search";
+}
+
+.header .header-profile {
+    justify-self: end;
+}
+
+.footer {
+    grid-template-columns: auto;
+    grid-template-areas: "social-medias" "profile-autor";
+}
+
+.footer .social-medias,
+.footer .profile-creator {
+    justify-self: center;
+}
+
+.title-container h2 {
+    text-align: center;
+}
